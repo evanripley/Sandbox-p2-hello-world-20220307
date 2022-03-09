@@ -1,3 +1,15 @@
+//Global Variables
+//
+void setup() {}//End setup
+//
+void draw() {}//End draw
+//
+void keyPressed() {}//End keyPressed
+//
+void mousePressed() {}//End mousePressed
+//
+//What we will copy and paste from the static program
+/*
 println("Hello World");
 String firstSentence = "You said Hello!";
 String secondSentence = "Mr. Mercer counts to 10, by 1.";
@@ -26,3 +38,8 @@ int two = 1;
 println(d+z+space+e+space+f+space+g+space+ten+y+space+h+space+one+z, "\n"); // Character escapes, \n - new line, \t - tab
 print("\t\t\t", d+z,e,f,g,ten+y,h,int(one)+two+z); // Casting, making a String into a number
 println( int(one)+two );
+//
+/* Note the computer is adding ASCII Values 
+period has an ASCII Value of 46
+so, int(one)+two+z = 1 + 1 + 46
+*/
