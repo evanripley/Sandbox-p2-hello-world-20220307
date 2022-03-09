@@ -1,21 +1,14 @@
 //Global Variables
-char z;
-char y;
-String d;
-String e;
-String f;
-String g;
-String ten;
-String h;
-String one;
-int two;
-int skipCount=2;
+char z, y;
+String d, e, f, g, ten, h, one;
+int two, skipCount=2, twenty;
+float decimal=1.0, thirty; //must include a zero decimal or compiler reads as INTEGER
 //
-void setup() 
+void setup()
 {
   String secondSentence = "Mr. Mercer counts to 10, by 1."; //Local Variables
   //println(secondSentence);
-  //Pulations, declaration, valuing.
+  //Populations, Declaration, Valuing
   z = '.';
   y = ',';
   d = "Mr";
@@ -23,17 +16,23 @@ void setup()
   f = "counts";
   g = "to";
   ten = "10000";
+  twenty = 10000;
+  thirty = 1000000000000.0; //12 zeros
   h = "by";
   one = "1";
   two = 1;
-  println(d+z, e, f, g, ten+y, h, str(two)+z); // Casting, making a integer into a string
-  println("One plus two is", int(one)+two);//Casting is int(one), to change string into integer
+  //println(d+z, e, f, g, ten+y, h, str(two)+z); //Casting, making an INTEGER into a STRING 
+  //println("One plus two is", int(one)+two); //Casting is int(one), to change STRING to INTEGER
 }//End setup
 //
-void draw() 
+void draw()
 {
-  two +=skipCount; //two+1, two ++ are the same
+  two*=skipCount; //+=, -=, *=, /=
   println(d+z, e, f, g, ten+y, h, str(two)+z);
+  twenty/=skipCount; // Formula to count backwards from 10000 //ten-1, ten--, ten-=1
+  println(d+z, e, f, g, one+y, "backwards from", str(twenty)+z);
+  thirty/=skipCount; // Formula to count backwards from 10000 //ten-1, ten--, ten-=1
+  println(d+z, e, f, g, one+y, "backwards from", str(thirty)+z);
 }//End draw
 //
 void keyPressed() {
@@ -42,15 +41,16 @@ void keyPressed() {
 void mousePressed() {
 }//End mousePressed
 //
-//What we will copy and paste from the static program
+// What we will copy and paste from the Static Program
 /*
  // Concatenation
  
  //
  
  
+ 
  //
-/* Note the computer is adding ASCII Values 
- period has an ASCII Value of 46
- so, int(one)+two+z = 1 + 1 + 46
+/*Note: the computer is adding ASCII Values
+ Period has an ASCII Value of 46
+ So, int(one)+two+z = 1 + 1 + 46
  */
